@@ -27,10 +27,12 @@ namespace Srum.Entities
             Ymin = ymin;
         }
 
+        //Calcula o X na conversão de SRU para SRD
         public double SRUTOSRDX(double Xu)
         {
             return (Xu - Xmin) * ((ResX - Xmin) / (Xmax - Xmin)) + Xmin;
         }
+        //Calcula o Y na conversão de SRU para SRD
         public double SRUTOSRDY(double Yu)
         {                  
             return (Yu - Ymin) * ((Ymin - ResY) / (Ymax - Ymin)) + ResY;
